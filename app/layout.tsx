@@ -2,6 +2,7 @@ import ThemeProvider from "@/components/providers/ThemeProvider";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { CurrencyProvider } from "@/context/CurrencyContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -90,20 +91,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable}`}
-    >
-     <body className="bg-[#0B0F1A] text-white antialiased overflow-x-hidden">
-  <ThemeProvider
-    attribute="class"
-    defaultTheme="dark"
-    enableSystem
+  <html
+    lang="en"
+    suppressHydrationWarning
+    className={`${geistSans.variable} ${geistMono.variable}`}
   >
+    <body className="bg-background text-foreground antialiased overflow-x-hidden transition-colors duration-300">
+      <ThemeProvider
+  attribute="class"
+  defaultTheme="dark"
+  enableSystem
+  disableTransitionOnChange
+>
+  <CurrencyProvider>
     {children}
-  </ThemeProvider>
-</body>
-    </html>
-  );
+  </CurrencyProvider>
+</ThemeProvider>
+    </body>
+  </html>
+);
 }
