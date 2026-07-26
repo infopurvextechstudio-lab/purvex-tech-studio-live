@@ -1,37 +1,43 @@
 "use client";
-import ThemeToggle from "./ThemeToggle";
+
 import Container from "@/components/shared/container/Container";
 import Logo from "@/components/layout/logo/Logo";
 import NavLinks from "./NavLinks";
 import CTAButton from "./CTAButton";
 import CurrencySwitcher from "./CurrencySwitcher";
+import CalendlyButton from "../../integration/CalendlyButton";
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#050816]/70 backdrop-blur-xl supports-[backdrop-filter]:bg-[#050816]/60">
+    <header className="fixed inset-x-0 top-0 z-[999] border-b border-white/10 bg-[#050816]/85 backdrop-blur-2xl">
       <Container>
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-[72px] lg:h-20 items-center justify-between">
 
           {/* Logo */}
-          <Logo />
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:block">
-            <NavLinks />
+          <div className="scale-110 origin-left">
+            <Logo />
           </div>
 
-          {/* Right Side */}
-          <div className="flex items-center gap-4">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex">
+            <NavLinks />
+          </nav>
 
-           
+          {/* Desktop Right */}
+          <div className="hidden lg:flex items-center gap-3">
+            <CurrencySwitcher />
 
-          <ThemeToggle />
+            <div className="hidden xl:block">
+              <CalendlyButton />
+            </div>
 
-          <CurrencySwitcher />
-
-            {/* CTA */}
             <CTAButton />
+          </div>
 
+          {/* Mobile */}
+          <div className="flex items-center lg:hidden">
+            <MobileMenu />
           </div>
 
         </div>

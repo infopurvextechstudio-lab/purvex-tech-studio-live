@@ -233,15 +233,17 @@ const addons = [
 
 export default function Pricing() {
   return (
+    
     <section
-      id="pricing"
-      className="relative overflow-hidden bg-[#050816] py-28"
-    >
+  id="pricing"
+  className="relative overflow-hidden py-20 lg:py-32"
+>
+      
       {/* Background */}
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#06B6D422,transparent_40%),radial-gradient(circle_at_bottom,#2563EB22,transparent_45%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
 
         {/* Heading */}
 
@@ -251,13 +253,13 @@ export default function Pricing() {
             Solutions & Pricing
           </span>
 
-          <h2 className="mt-8 text-5xl font-black text-white lg:text-6xl">
+          <h2 className="mt-5 text-3xl font-black leading-tight text-white sm:text-4xl lg:mt-8 lg:text-6xl">
             Flexible Pricing
             <br />
             For Every Business
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-400">
+          <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-7 text-slate-400 sm:text-lg">
             Transparent pricing, premium quality,
             scalable solutions and long-term support.
           </p>
@@ -266,18 +268,18 @@ export default function Pricing() {
 
         {/* Trust Strip */}
 
-        <div className="mt-20 grid gap-6 md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-4 lg:mt-20 lg:grid-cols-4 lg:gap-6">
 
           {[
-            ["500+","Projects"],
-            ["120+","Clients"],
+            ["50+","Projects"],
+            ["12+","Clients"],
             ["98%","Satisfaction"],
             ["24/7","Support"],
           ].map(([value,label]) => (
 
             <div
               key={label}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-xl"
+              className="rounded-3xl border border-white/10 bg-white/5 p-5 lg:p-8 text-center backdrop-blur-xl"
             >
               <h3 className="text-4xl font-black text-cyan-400">
                 {value}

@@ -36,10 +36,10 @@ const features = [
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="relative overflow-hidden bg-[#08111f] py-28"
-    >
+  
+      <section id="about">
+    
+  
       {/* Background Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#2563eb22,transparent_35%),radial-gradient(circle_at_bottom_right,#7c3aed22,transparent_35%)]" />
 
@@ -80,7 +80,7 @@ export default function About() {
 
               <div>
                 <h3 className="text-4xl font-black text-cyan-400">
-                  500+
+                  50+
                 </h3>
 
                 <p className="mt-2 text-slate-400">
@@ -90,7 +90,7 @@ export default function About() {
 
               <div>
                 <h3 className="text-4xl font-black text-cyan-400">
-                  120+
+                  12+
                 </h3>
 
                 <p className="mt-2 text-slate-400">

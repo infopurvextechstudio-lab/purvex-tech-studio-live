@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,12 +7,12 @@ export default function Logo() {
   return (
     <Link href="/" className="flex items-center">
       <Image
-        src="/logos/logo.png"
+        src="/logo/logo.png"
         alt="Purvex Tech Studio"
-        width={240}
-        height={70}
+        width={360}
+        height={100}
         priority
-        className="h-[140px] w-auto object-contain lg:h-[146px]"
+        className="block h-26 w-auto lg:h-30 xl:h-34"
       />
     </Link>
   );

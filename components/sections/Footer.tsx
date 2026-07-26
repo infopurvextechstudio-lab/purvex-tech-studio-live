@@ -1,52 +1,81 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+
 import {
   Mail,
   Phone,
   MapPin,
-  ArrowUpRight,
+  ArrowUp,
 } from "lucide-react";
 
 import {
   FaLinkedinIn,
   FaInstagram,
   FaTiktok,
-} from "react-icons/fa6"; 
+} from "react-icons/fa6";
+
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#040816]">
+    <footer className="relative overflow-hidden border-t border-cyan-500/10 bg-[#040816]">
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#2563EB18,transparent_45%)]" />
+      {/* Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#06B6D420,transparent_60%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-20">
+      <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:py-20">
 
-        <div className="grid gap-12 lg:grid-cols-5">
+        {/* Top */}
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
 
           {/* Company */}
+          <div className="md:col-span-2">
 
-          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3">
 
-            <h2 className="text-3xl font-black text-white">
-              Purvex Tech Studio
-            </h2>
+            <Image
+  src="/logo/logo.png"
+  alt="Purvex Tech Studio"
+  width={300}
+  height={280}
+  priority
+  className="h-42 w-auto lg:h-36 object-contain transition-transform duration-300 hover:scale-105"
+/>
 
-            <p className="mt-6 leading-8 text-slate-400">
-              Building modern businesses through premium websites,
-              AI automation, digital growth and career excellence.
+              <div>
+
+                <h2 className="text-2xl font-black text-white lg:text-3xl">
+                  Purvex Tech Studio
+                </h2>
+
+                <p className="text-sm text-cyan-400">
+                  Build • Automate • Grow
+                </p>
+
+              </div>
+
+            </div>
+
+            <p className="mt-6 max-w-md text-[15px] leading-7 text-slate-400">
+              Helping startups, businesses and professionals grow through
+              premium websites, AI automation, branding and scalable digital
+              solutions.
             </p>
 
             <div className="mt-8 space-y-4">
 
-              <div className="flex items-center gap-3 text-slate-300">
-                <Mail size={18} />
+              <div className="flex items-center gap-3 text-sm text-slate-300">
+                <Mail className="text-cyan-400" size={18} />
                 infopurvextechstudio@gmail.com
               </div>
 
-              <div className="flex items-center gap-3 text-slate-300">
-                <Phone size={18} />
+              <div className="flex items-center gap-3 text-sm text-slate-300">
+                <Phone className="text-cyan-400" size={18} />
                 +92 XXX XXXXXXX
               </div>
 
-              <div className="flex items-center gap-3 text-slate-300">
-                <MapPin size={18} />
+              <div className="flex items-center gap-3 text-sm text-slate-300">
+                <MapPin className="text-cyan-400" size={18} />
                 Karachi, Pakistan
               </div>
 
@@ -55,72 +84,57 @@ export default function Footer() {
           </div>
 
           {/* Business */}
-
           <div>
 
-            <h3 className="mb-5 text-xl font-bold text-white">
+            <h3 className="mb-5 text-lg font-bold text-white">
               Business
             </h3>
 
-            <ul className="space-y-3 text-slate-400">
+            <ul className="space-y-3 text-sm text-slate-400">
 
-              <li>Web Development</li>
-
-              <li>WordPress</li>
-
-              <li>Shopify</li>
-
-              <li>AI Automation</li>
-
-              <li>SEO • AEO • GEO</li>
+              <li><Link href="/services">Website Development</Link></li>
+              <li><Link href="/services">WordPress</Link></li>
+              <li><Link href="/services">Shopify</Link></li>
+              <li><Link href="/services">AI Automation</Link></li>
+              <li><Link href="/services">SEO • AEO • GEO</Link></li>
 
             </ul>
 
           </div>
 
           {/* Career */}
-
           <div>
 
-            <h3 className="mb-5 text-xl font-bold text-white">
+            <h3 className="mb-5 text-lg font-bold text-white">
               Career
             </h3>
 
-            <ul className="space-y-3 text-slate-400">
+            <ul className="space-y-3 text-sm text-slate-400">
 
-              <li>ATS Resume</li>
-
-              <li>LinkedIn</li>
-
-              <li>Portfolio</li>
-
-              <li>Cover Letter</li>
-
-              <li>Personal Branding</li>
+              <li><Link href="/services">ATS Resume</Link></li>
+              <li><Link href="/services">LinkedIn</Link></li>
+              <li><Link href="/services">Portfolio</Link></li>
+              <li><Link href="/services">Cover Letter</Link></li>
+              <li><Link href="/services">Personal Branding</Link></li>
 
             </ul>
 
           </div>
 
           {/* Company */}
-
           <div>
 
-            <h3 className="mb-5 text-xl font-bold text-white">
+            <h3 className="mb-5 text-lg font-bold text-white">
               Company
             </h3>
 
-            <ul className="space-y-3 text-slate-400">
+            <ul className="space-y-3 text-sm text-slate-400">
 
-              <li>About</li>
-
-              <li>Projects</li>
-
-              <li>Pricing</li>
-
-              <li>Contact</li>
-
-              <li>Blog</li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/portfolio">Portfolio</Link></li>
+              <li><Link href="/pricing">Pricing</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
 
             </ul>
 
@@ -130,18 +144,21 @@ export default function Footer() {
 
         {/* Bottom */}
 
-        <div className="mt-20 flex flex-col items-center justify-between gap-8 border-t border-white/10 pt-8 lg:flex-row">
+        <div className="mt-14 flex flex-col gap-8 border-t border-white/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
 
-          <p className="text-slate-500">
-            © 2026 Purvex Tech Studio. All Rights Reserved.
+          <p className="text-center text-sm text-slate-500">
+            © {new Date().getFullYear()} Purvex Tech Studio. All Rights Reserved.
           </p>
 
-          <div className="flex items-center gap-5">
+          {/* Social */}
+
+          <div className="flex justify-center gap-4">
 
             <a
-              href="https://linkedin.com/company/purvex-tech-studio/?originalSubdomain=pk"
+              href="https://linkedin.com/company/purvex-tech-studio"
               target="_blank"
-              className="rounded-full border border-white/10 p-3 transition hover:bg-blue-600"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/10 bg-white/5 p-3 text-white transition hover:border-cyan-400 hover:bg-cyan-500"
             >
               <FaLinkedinIn size={18} />
             </a>
@@ -149,7 +166,8 @@ export default function Footer() {
             <a
               href="https://www.instagram.com/purvextechstudio"
               target="_blank"
-              className="rounded-full border border-white/10 p-3 transition hover:bg-pink-600"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/10 bg-white/5 p-3 text-white transition hover:border-pink-500 hover:bg-pink-600"
             >
               <FaInstagram size={18} />
             </a>
@@ -157,19 +175,28 @@ export default function Footer() {
             <a
               href="https://www.tiktok.com/@purvextechstudio"
               target="_blank"
-              className="rounded-full border border-white/10 p-3 transition hover:bg-white hover:text-black"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/10 bg-white/5 p-3 text-white transition hover:bg-white hover:text-black"
             >
               <FaTiktok size={18} />
             </a>
 
           </div>
 
-          <button className="flex items-center gap-2 rounded-full border border-white/10 px-5 py-3 text-white transition hover:bg-white/10">
+          {/* Back To Top */}
 
+          <button
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
+            className="mx-auto flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-400 hover:bg-cyan-500 lg:mx-0"
+          >
             Back To Top
 
-            <ArrowUpRight size={18} />
-
+            <ArrowUp size={18} />
           </button>
 
         </div>

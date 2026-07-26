@@ -7,7 +7,9 @@ export type Currency =
   | "USD"
   | "AED"
   | "GBP"
-  | "EUR";
+  | "EUR"
+  | "SAR"
+  | "TRY";
 
 interface CurrencyContextType {
   currency: Currency;

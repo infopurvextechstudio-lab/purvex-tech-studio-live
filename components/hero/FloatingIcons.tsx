@@ -1,52 +1,81 @@
 "use client";
 
-import {
-  Bot,
-  Globe2,
-  Workflow,
-  SearchCheck,
-  BriefcaseBusiness,
-  Sparkles,
-} from "lucide-react";
+import Image from "next/image";
 
-const icons = [
-  {
-    Icon: Globe2,
-    className: "top-10 left-8 bg-blue-600",
-  },
-  {
-    Icon: Bot,
-    className: "top-24 right-8 bg-violet-600",
-  },
-  {
-    Icon: Workflow,
-    className: "bottom-12 left-10 bg-cyan-600",
-  },
-  {
-    Icon: SearchCheck,
-    className: "bottom-20 right-8 bg-green-600",
-  },
-  {
-    Icon: BriefcaseBusiness,
-    className: "left-1/2 top-2 -translate-x-1/2 bg-orange-500",
-  },
-  {
-    Icon: Sparkles,
-    className: "left-1/2 bottom-2 -translate-x-1/2 bg-pink-500",
-  },
+const outerIcons = [
+  { src: "/icons/tech/react.svg", angle: 0 },
+  { src: "/icons/tech/nextjs.svg", angle: 90 },
+  { src: "/icons/tech/nodejs.svg", angle: 180 },
+  { src: "/icons/tech/cloudflare.svg", angle: 270 },
+];
+
+const innerIcons = [
+  { src: "/icons/tech/openai.svg", angle: 45 },
+  { src: "/icons/tech/tailwind.svg", angle: 135 },
+  { src: "/icons/tech/shopify.svg", angle: 225 },
+  { src: "/icons/tech/vercel.svg", angle: 315 },
 ];
 
 export default function FloatingIcons() {
   return (
     <>
-      {icons.map(({ Icon, className }, index) => (
-        <div
-          key={index}
-          className={`absolute ${className} rounded-full p-4 shadow-2xl animate-pulse`}
-        >
-          <Icon className="h-7 w-7 text-white" />
-        </div>
-      ))}
+      {/* OUTER RING */}
+
+      <div className="orbit">
+
+        {outerIcons.map((logo) => (
+
+          <div
+            key={logo.src}
+            className="absolute"
+            style={{
+              transform: `rotate(${logo.angle}deg) translateX(260px)`,
+            }}
+          >
+            <div className="glow float flex h-16 w-16 items-center justify-center rounded-full border border-cyan-400/20 bg-white/10 backdrop-blur-xl">
+
+              <Image
+                src={logo.src}
+                alt=""
+                width={34}
+                height={34}
+              />
+
+            </div>
+          </div>
+
+        ))}
+
+      </div>
+
+      {/* INNER RING */}
+
+      <div className="orbit-reverse">
+
+        {innerIcons.map((logo) => (
+
+          <div
+            key={logo.src}
+            className="absolute"
+            style={{
+              transform: `rotate(${logo.angle}deg) translateX(180px)`,
+            }}
+          >
+            <div className="glow float flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-[#0b1220]/80 backdrop-blur-xl">
+
+              <Image
+                src={logo.src}
+                alt=""
+                width={28}
+                height={28}
+              />
+
+            </div>
+          </div>
+
+        ))}
+
+      </div>
     </>
   );
 }
