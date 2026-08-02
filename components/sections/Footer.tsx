@@ -42,7 +42,7 @@ export default function Footer() {
   className="h-42 w-auto lg:h-36 object-contain transition-transform duration-300 hover:scale-105"
 />
 
-              <div>
+              {/* <div>
 
                 <h2 className="text-2xl font-black text-white lg:text-3xl">
                   Purvex Tech Studio
@@ -52,13 +52,13 @@ export default function Footer() {
                   Build • Automate • Grow
                 </p>
 
-              </div>
+              </div> */}
 
             </div>
 
             <p className="mt-6 max-w-md text-[15px] leading-7 text-slate-400">
               Helping startups, businesses and professionals grow through
-              premium websites, AI automation, branding and scalable digital
+              premium websites, branding and scalable digital
               solutions.
             </p>
 
@@ -69,15 +69,8 @@ export default function Footer() {
                 infopurvextechstudio@gmail.com
               </div>
 
-              <div className="flex items-center gap-3 text-sm text-slate-300">
-                <Phone className="text-cyan-400" size={18} />
-                +92 XXX XXXXXXX
-              </div>
+             
 
-              <div className="flex items-center gap-3 text-sm text-slate-300">
-                <MapPin className="text-cyan-400" size={18} />
-                Karachi, Pakistan
-              </div>
 
             </div>
 

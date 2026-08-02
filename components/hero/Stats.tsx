@@ -4,14 +4,14 @@ import CountUp from "react-countup";
 
 const stats = [
   {
-    value: 50,
+    value: 20,
     suffix: "+",
     label: "Projects Delivered",
   },
   {
-    value: 12,
+    value: 7,
     suffix: "+",
-    label: "Happy Clients",
+    label: "Global Clients",
   },
   {
     value: 98,

@@ -4,7 +4,7 @@ import TrustedBy from "@/components/hero/TrustedBy";
 import About from "@/components/sections/About";
 import BusinessSolutions from "@/components/sections/BusinessSolutions";
 import Portfolio from "@/components/sections/Portfolio";
-// import Testimonials from "@/components/sections/Testimonials";
+import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import Pricing from "@/components/sections/Pricing";
@@ -16,7 +16,7 @@ import FeaturedBlogs from "@/components/sections/FeaturedBlogs";
 export default function Home() {
   return (
     <>
-   <Navbar />
+ 
 <Hero />
 <TrustedBy />
 
@@ -29,6 +29,8 @@ export default function Home() {
 <Pricing />
 
 <FeaturedBlogs />
+
+<Testimonials />
 
 <FAQ />
 

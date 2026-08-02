@@ -11,17 +11,16 @@ export default function HeroContent() {
       </div>
 <h1 className="text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-7xl">
 
-Build.
+Building
 
 <br />
 
 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-500 bg-clip-text text-transparent">
-Scale.
+Togther.
 </span>
 
 <br />
 
-Automate.
 
 </h1>
       
@@ -30,7 +29,7 @@ Automate.
     <p className="mt-6 max-w-xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
 
 Purvex Tech Studio helps startups, businesses and professionals
-launch premium websites, AI automation, career branding and
+launch premium websites,career branding and
 high-converting digital experiences that drive measurable growth.
 
 </p>

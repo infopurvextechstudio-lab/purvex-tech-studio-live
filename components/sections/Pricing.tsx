@@ -265,37 +265,12 @@ export default function Pricing() {
           </p>
 
         </div>
+        
 
-        {/* Trust Strip */}
 
-        <div className="mt-12 grid grid-cols-2 gap-4 lg:mt-20 lg:grid-cols-4 lg:gap-6">
+         
 
-          {[
-            ["50+","Projects"],
-            ["12+","Clients"],
-            ["98%","Satisfaction"],
-            ["24/7","Support"],
-          ].map(([value,label]) => (
-
-            <div
-              key={label}
-              className="rounded-3xl border border-white/10 bg-white/5 p-5 lg:p-8 text-center backdrop-blur-xl"
-            >
-              <h3 className="text-4xl font-black text-cyan-400">
-                {value}
-              </h3>
-
-              <p className="mt-2 text-slate-400">
-                {label}
-              </p>
-
-            </div>
-
-          ))}
-
-        </div>
-
-        {/* Business */}
+    
 
         <div className="mt-28">
 
@@ -365,119 +340,7 @@ export default function Pricing() {
 
         </div>
 
-        {/* Enterprise CTA */}
-
-        <div className="mt-28 overflow-hidden rounded-[36px] border border-cyan-500/20 bg-gradient-to-r from-cyan-600/10 via-blue-600/10 to-indigo-600/10 p-12 backdrop-blur-xl">
-
-          <div className="grid items-center gap-10 lg:grid-cols-2">
-
-            <div>
-
-              <span className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-300">
-                Enterprise Solutions
-              </span>
-
-              <h2 className="mt-6 text-5xl font-black text-white">
-                Need Something
-                <br />
-                Completely Custom?
-              </h2>
-
-              <p className="mt-6 text-lg leading-8 text-slate-300">
-                We build custom SaaS platforms,
-                AI automation, CRM systems,
-                dashboards, ERP software,
-                enterprise websites and
-                business management solutions.
-              </p>
-
-              <div className="mt-8 flex flex-wrap gap-3">
-
-                {[
-                  "AI Automation",
-                  "CRM",
-                  "ERP",
-                  "Dashboard",
-                  "API",
-                  "Cloud",
-                ].map((tag) => (
-
-                  <span
-                    key={tag}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300"
-                  >
-                    {tag}
-                  </span>
-
-                ))}
-
-              </div>
-
             </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
-
-              <h3 className="text-3xl font-black text-white">
-                Let's Discuss
-              </h3>
-
-              <p className="mt-4 leading-8 text-slate-400">
-                Book a free consultation and
-                receive a custom proposal
-                based on your exact business requirements.
-              </p>
-
-              <button className="mt-8 flex w-full items-center justify-center gap-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 py-4 font-bold text-white transition hover:scale-105">
-
-                Book Free Consultation
-
-                <ArrowRight size={18} />
-
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-                {/* Bottom CTA */}
-
-        <div className="mt-28 text-center">
-
-          <h2 className="text-5xl font-black text-white">
-            Ready To Grow
-            <br />
-            Your Business?
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400">
-            Whether you're launching a startup, scaling your company,
-            or building your professional brand, Purvex Tech Studio
-            delivers premium digital solutions designed for growth.
-          </p>
-
-          <div className="mt-12 flex flex-col items-center justify-center gap-5 sm:flex-row">
-
-            <button className="flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 font-bold text-white transition-all duration-300 hover:scale-105">
-
-              Start Your Project
-
-              <ArrowRight size={20} />
-
-            </button>
-
-            <button className="rounded-full border border-white/10 bg-white/5 px-10 py-4 font-bold text-white transition-all duration-300 hover:bg-white/10">
-
-              Contact Sales
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
     </section>
   );
 }

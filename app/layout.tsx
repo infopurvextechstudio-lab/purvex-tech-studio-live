@@ -4,8 +4,8 @@ import Schema from "@/components/seo/Schema";
 import Navbar from "@/components/layout/navbar/Navbar";
 //  import Footer from "@/components/sections/Footer";
 
-import { ScrollProgress } from "@/components/effects/scroll-progress";
-import { CustomCursor } from "@/components/effects/custom-cursor";
+
+
 
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -125,6 +125,11 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+  icon: "/favicon.ico",
+  shortcut: "/favicon.ico",
+  apple: "/apple-touch-icon.png",
+},
 
   twitter: {
     card: "summary_large_image",
@@ -136,11 +141,6 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
 
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
 
   robots: {
     index: true,
@@ -182,9 +182,7 @@ export default function RootLayout({
       <body className="bg-background text-foreground overflow-x-hidden antialiased">
         <Schema siteUrl={siteUrl} />
 
-        <ScrollProgress />
-        <CustomCursor />
-
+        
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -195,6 +193,7 @@ export default function RootLayout({
 
             <main>{children}</main>
 
+ 
           </CurrencyProvider>
         </ThemeProvider>
       </body>
