@@ -40,8 +40,8 @@ export default function HeroVisual() {
 
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-3xl border border-cyan-500/20 bg-[#0B1220] p-3 shadow-[0_0_50px_rgba(6,182,212,0.15)]">
 
-              <Image
-  src="/images/hero/hero-banner.jpeg"
+             <Image
+  src="/images/hero/hero-banner.webp"
   alt="Purvex Tech Studio Dashboard"
   fill
   priority

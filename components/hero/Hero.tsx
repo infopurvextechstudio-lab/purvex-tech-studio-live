@@ -26,7 +26,7 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#050816] via-[#07122b] to-[#050816]">
-      <div className="hidden lg:block">
+     <div className="hidden lg:block">
   <GridBackground />
   <AuroraBackground />
   <MouseGradient />
