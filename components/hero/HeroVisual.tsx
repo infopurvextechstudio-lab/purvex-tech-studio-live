@@ -8,7 +8,11 @@ export default function HeroVisual() {
     <div className="relative flex h-[650px] items-center justify-center">
 
       {/* Floating Icons */}
-      <FloatingIcons />
+     <div className="hidden md:block">
+  <div className="hidden md:block">
+    <FloatingIcons />
+</div>
+</div>
 
       {/* Main Glow */}
       <div className="absolute h-[420px] w-[420px] md:h-[650px] md:w-[650px] rounded-full bg-cyan-500/15 blur-[100px] md:blur-[180px]" />
@@ -37,14 +41,15 @@ export default function HeroVisual() {
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-3xl border border-cyan-500/20 bg-[#0B1220] p-3 shadow-[0_0_50px_rgba(6,182,212,0.15)]">
 
               <Image
-                src="/images/hero/hero-banner.jpeg"
-                alt="Purvex Tech Studio Dashboard"
-                fill
-                priority
-                quality={65}
-                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 40vw"
-                className="object-contain"
-              />
+  src="/images/hero/hero-banner.jpeg"
+  alt="Purvex Tech Studio Dashboard"
+  fill
+  priority
+  fetchPriority="high"
+  quality={70}
+  sizes="(max-width:768px) 95vw, (max-width:1200px) 45vw, 40vw"
+  className="object-contain"
+/>
 
             </div>
 
