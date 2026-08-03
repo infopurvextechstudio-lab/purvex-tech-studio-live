@@ -3,7 +3,7 @@ import { CurrencyProvider } from "@/context/CurrencyContext";
 import Schema from "@/components/seo/Schema";
 import Navbar from "@/components/layout/navbar/Navbar";
 //  import Footer from "@/components/sections/Footer";
-
+import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 
 
 
@@ -179,23 +179,25 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="bg-background text-foreground overflow-x-hidden antialiased">
-        <Schema siteUrl={siteUrl} />
 
-        
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-        >
-          <CurrencyProvider>
-            <Navbar />
+  <PerformanceOptimizer />
 
-            <main>{children}</main>
+  <Schema siteUrl={siteUrl} />
 
- 
-          </CurrencyProvider>
-        </ThemeProvider>
-      </body>
+  <ThemeProvider
+    attribute="class"
+    defaultTheme="dark"
+    enableSystem={false}
+  >
+    <CurrencyProvider>
+      <Navbar />
+
+      <main>{children}</main>
+
+    </CurrencyProvider>
+  </ThemeProvider>
+
+</body>
     </html>
   );
 }

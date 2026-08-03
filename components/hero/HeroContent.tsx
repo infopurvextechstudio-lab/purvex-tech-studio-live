@@ -7,7 +7,7 @@ export default function HeroContent() {
     <div className="max-w-xl lg:max-w-2xl">
 
       <div className="mb-5 inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-xs font-medium text-blue-300 sm:px-5 sm:text-sm">
-         Trusted by Professionals & Growing Businesses
+         Trusted by Global  Professionals 
       </div>
 <h1 className="text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-7xl">
 
@@ -16,7 +16,7 @@ Building
 <br />
 
 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-500 bg-clip-text text-transparent">
-Togther.
+Together.
 </span>
 
 <br />
