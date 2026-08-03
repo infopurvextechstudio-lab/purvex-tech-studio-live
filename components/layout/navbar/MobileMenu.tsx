@@ -188,7 +188,7 @@ export default function MobileMenu() {
         </div>
 
         <div className="border-t border-white/10 px-6 py-4 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} Purvex Tech Studio
+          © 2026 Purvex Tech Studio
         </div>
       </aside>
     </>
