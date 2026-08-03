@@ -140,18 +140,9 @@ export function optimizeIntersection() {
     .forEach((el) => observer.observe(el));
 }
 
-export function optimizeContentVisibility() {
-  if (typeof document === "undefined") return;
 
-  document
-    .querySelectorAll("section")
-    .forEach((section) => {
-      const el = section as HTMLElement;
 
-      el.style.contentVisibility = "auto";
-      el.style.containIntrinsicSize = "1000px";
-    });
-}
+ 
 
 export function optimizeResourceHints() {
   preconnect("https://fonts.gstatic.com");
@@ -171,7 +162,7 @@ export function optimizeEverything() {
 
     optimizeIntersection();
 
-    optimizeContentVisibility();
+   
 
     optimizeResourceHints();
   });

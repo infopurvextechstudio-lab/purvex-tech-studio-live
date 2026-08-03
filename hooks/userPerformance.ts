@@ -27,29 +27,9 @@ export default function usePerformance() {
       root.classList.add("reduce-motion");
     }
 
-    const images = document.querySelectorAll("img");
+    
 
-    images.forEach((img) => {
-      img.decoding = "async";
-      img.loading = "lazy";
-    });
-
-    const videos = document.querySelectorAll("video");
-
-    videos.forEach((video) => {
-      video.preload = "metadata";
-    });
-
-    const sections =
-      document.querySelectorAll("section");
-
-    sections.forEach((section) => {
-      const el = section as HTMLElement;
-
-      el.style.contain = "layout paint style";
-
-      el.style.contentVisibility = "auto";
-    });
+    
 
     const observer = new IntersectionObserver(
       (entries) => {
