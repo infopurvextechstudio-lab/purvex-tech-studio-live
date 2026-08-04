@@ -12,7 +12,7 @@ const outerIcons = [
 const innerIcons = [
   { src: "/icons/tech/openai.svg", angle: 45, name: "OpenAI" },
   { src: "/icons/tech/tailwind.svg", angle: 135, name: "Tailwind CSS" },
-  { src: "/icons/tech/shopify.svg", angle: 225, name: "Shopify" },
+  { src: "/icons/tech/shopify.png", angle: 225, name: "Shopify" },
   { src: "/icons/tech/vercel.svg", angle: 315, name: "Vercel" },
 ];
 
